@@ -14,7 +14,7 @@ namespace Minesweeper.UI
 	{
 		#region Private Variables
 		
-		[SerializeField] private Dropdown _fieldSize;
+		[SerializeField] private Dropdown _fieldSize; 
 		[SerializeField] private CoreGameplay _coreGameplay;
 		[SerializeField] private GridLayoutGroup _layoutGroup;
 		
