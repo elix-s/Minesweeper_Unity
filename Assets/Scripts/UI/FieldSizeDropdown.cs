@@ -20,14 +20,14 @@ namespace Minesweeper.UI
 		
 		#endregion
 		
-		#region Methods
+		#region Private Methods
 		
 		/// <summary>
 		/// Настройка размеров игрового поля
 		/// </summary>
-		public void DropdownValueChanged(Dropdown change)
+		private void DropdownValueChanged(Dropdown change)
         {
-            switch (change.value)
+            switch(change.value)
             {
                 case 0:
 					_coreGameplay.FieldSize = 5;
