@@ -20,6 +20,10 @@ namespace Minesweeper.GameMechanics
 		[SerializeField] private Sprite _bombImage;
 		[SerializeField] private Sprite _flagImage;
 		private CoreGameplay _coreGameplay;
+
+		/// <summary>
+		/// true, если на ячейке установлен флажок
+		/// </summary>
 		private bool _setFlag;
 		
 		#endregion
@@ -67,7 +71,7 @@ namespace Minesweeper.GameMechanics
 		}
 
 		/// <summary>
-		/// Метод установки флага
+		/// Метод установки флажка на ячейку при клике ПКМ
 		/// </summary>
 		public void OnPointerClick(PointerEventData eventData)
 		{

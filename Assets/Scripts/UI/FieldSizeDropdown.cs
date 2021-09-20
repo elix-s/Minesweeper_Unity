@@ -17,6 +17,7 @@ namespace Minesweeper.UI
 		[SerializeField] private Dropdown _fieldSize; 
 		[SerializeField] private CoreGameplay _coreGameplay;
 		[SerializeField] private GridLayoutGroup _layoutGroup;
+		private int _counter;
 		
 		#endregion
 		
@@ -30,34 +31,30 @@ namespace Minesweeper.UI
             switch(change.value)
             {
                 case 0:
-					_coreGameplay.FieldSize = 5;
-					_layoutGroup.constraintCount = 5;
+					_counter = 5;
                     break;
 				case 1:
-					_coreGameplay.FieldSize = 6;
-					_layoutGroup.constraintCount = 6;
+					_counter = 6;
                     break;
 				case 2:
-					_coreGameplay.FieldSize = 7;
-					_layoutGroup.constraintCount = 7;
+					_counter = 7;
                     break;
 				case 3:
-					_coreGameplay.FieldSize = 8;
-					_layoutGroup.constraintCount = 8;
+					_counter = 8;
                     break;
 				case 4:
-					_coreGameplay.FieldSize = 9;
-					_layoutGroup.constraintCount = 9;
+					_counter = 9;
                     break;
 				case 5:
-					_coreGameplay.FieldSize = 10;
-					_layoutGroup.constraintCount = 10;
+					_counter = 10;
                     break;
                 default:
-                    _coreGameplay.FieldSize = 5;
-					_layoutGroup.constraintCount = 5;
+                    _counter = 5;
 					break;
             }
+
+			_coreGameplay.FieldSize = _counter;
+			_layoutGroup.constraintCount = _counter;
         }
 		
 		#endregion
@@ -66,9 +63,7 @@ namespace Minesweeper.UI
 		
 		void Start()
 		{
-			_fieldSize.onValueChanged.AddListener(delegate {
-                DropdownValueChanged(_fieldSize);
-            });	
+			_fieldSize.onValueChanged.AddListener(delegate { DropdownValueChanged(_fieldSize); });	
 		}
 		
 		#endregion

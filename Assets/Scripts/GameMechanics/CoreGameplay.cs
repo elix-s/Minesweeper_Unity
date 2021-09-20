@@ -14,25 +14,40 @@ namespace Minesweeper.GameMechanics
 		#region Private Variables
 		
 		[SerializeField] private CellComponent _cellPrefab;
-		[SerializeField] private int _bombCount;
+		[SerializeField, Tooltip("Кол-во бомб")] private int _bombCount;
 		[SerializeField] private ReplayButton _replayButton;
 		[SerializeField] private GameObject _playButton;
-		[SerializeField] private GameObject _dropdownFieldSize;
+		[SerializeField, Tooltip("Размер поля")] private GameObject _dropdownFieldSize;
 		private CellComponent[,] _grid;
+
+		/// <summary>
+		/// счетчик ячеек, которые нужно открыть
+		/// </summary>
 		private int _clickableCells;
+
+		/// <summary>
+		/// массив всех ячеек игрового поля
+		/// </summary>
 		private CellComponent[] _allCells;
+
+		/// <summary>
+		/// счетчик открытых ячеек
+		/// </summary>
 		private int _openCells;
 		
 		#endregion
 		
 		#region Public Variables
 		
+		/// <summary>
+		/// размер поля
+		/// </summary>	
 		public int FieldSize;
 		
 		#endregion
 	
 		#region Private Methods
-		
+
 		/// <summary>
 		/// Стартовая инициализация ячеек
 		/// </summary>	
