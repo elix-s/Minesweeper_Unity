@@ -24,7 +24,7 @@ namespace Minesweeper.UI
 		#region Private Methods
 		
 		/// <summary>
-		/// Настройка размеров игрового поля
+		/// Настройка размеров поля
 		/// </summary>
 		private void DropdownValueChanged(Dropdown change)
         {

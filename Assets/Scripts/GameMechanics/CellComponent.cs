@@ -71,7 +71,7 @@ namespace Minesweeper.GameMechanics
 		}
 
 		/// <summary>
-		/// Метод установки флажка на ячейку при клике ПКМ
+		/// Метод установки флажка на ячейку при нажатии ПКМ
 		/// </summary>
 		public void OnPointerClick(PointerEventData eventData)
 		{
